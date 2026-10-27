@@ -1,0 +1,36 @@
+{
+  "name": "pranavital-ecommerce",
+  "version": "1.0.0",
+  "description": "High-performance, modern e-commerce storefront for eco-friendly yoga mats and holistic healthcare recovery essentials.",
+  "main": "index.html",
+  "scripts": {
+    "start": "powershell -ExecutionPolicy Bypass -File .\\server.ps1",
+    "serve": "npx serve .",
+    "lint:html": "npx htmlhint \"**/*.html\"",
+    "lint:css": "npx stylelint \"**/*.css\"",
+    "lint:js": "npx eslint \"assets/js/**/*.js\"",
+    "validate": "npm run lint:html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/pranavital-ecommerce.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "yoga-mats",
+    "healthcare",
+    "wellness",
+    "acupressure",
+    "mindfulness",
+    "tailwind-css",
+    "frontend",
+    "responsive-design"
+  ],
+  "author": "PranaVital Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/pranavital-ecommerce/issues"
+  },
+  "homepage": "https://your-username.github.io/pranavital-ecommerce"
+}
+

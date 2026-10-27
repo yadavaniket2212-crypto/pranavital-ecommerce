@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PranaVital | Eco Yoga Mats & Holistic Healthcare Essentials</title>
+  <meta name="description" content="Shop premium non-toxic yoga mats, orthopedic acupressure recovery, and certified holistic healthcare supplements designed for mindful movement and vital living.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#1F3D2B',
+              50: '#F4F7F5',
+              100: '#E6EDE8',
+              500: '#2D5A43',
+              700: '#1F3D2B',
+              800: '#162C1F',
+              900: '#0F1E15',
+            },
+            terracotta: {
+              DEFAULT: '#C27D54',
+              light: '#F8EFEA',
+              hover: '#A9653D'
+            },
+            cream: {
+              DEFAULT: '#FBF9F5',
+              50: '#FFFFFF',
+              100: '#F5F2EB',
+              200: '#EBE5D8'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-cream text-stone-800 antialiased selection:bg-emerald-800 selection:text-white">
+
+  <!-- 1. TOP ANNOUNCEMENT BANNER -->
+  <div class="bg-[#1F3D2B] text-stone-200 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2 justify-center">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>🌿 <strong>Flash Wellness Sale:</strong> Use code <span class="bg-[#2D5A43] px-1.5 py-0.5 rounded text-amber-300 font-mono font-bold">ZEN25</span> for 25% OFF + Free Carbon-Neutral Shipping over $75</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] text-stone-300">
+        <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Doctor Endorsed</span>
+        <span class="hidden md:inline">•</span>
+        <span class="hidden md:flex items-center gap-1"><i data-lucide="leaf" class="w-3.5 h-3.5 text-emerald-400"></i> 100% Non-Toxic</span>
+        <span class="hidden md:inline">•</span>
+        <span class="flex items-center gap-1"><i data-lucide="truck" class="w-3.5 h-3.5 text-amber-300"></i> Free Returns (30 Days)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. STICKY HEADER & NAVBAR -->
+  <header class="sticky top-0 z-40 glass-header transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-[#1F3D2B] flex items-center justify-center text-amber-300 shadow-md group-hover:bg-[#2D5A43] transition">
+            <!-- Lotus / Seed of Life icon SVG -->
+            <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C12 2 15 7 15 11C15 13 13.5 15 12 15C10.5 15 9 13 9 11C9 7 12 2 12 2Z"></path>
+              <path d="M12 15C8 15 4 12 4 8C7 8 10 10 12 15Z"></path>
+              <path d="M12 15C16 15 20 12 20 8C17 8 14 10 12 15Z"></path>
+              <path d="M7 14C5 17 6 21 12 21C18 21 19 17 17 14"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-[#1F3D2B] block leading-none">PranaVital</span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-[#C27D54] block mt-0.5">Yoga & Healthcare</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-stone-700">
+          <a href="#catalog" class="hover:text-[#1F3D2B] transition">Shop All</a>
+          <a href="#catalog" onclick="selectCategoryTab('yoga-mats')" class="hover:text-[#1F3D2B] transition">Yoga Mats</a>
+          <a href="#catalog" onclick="selectCategoryTab('healthcare')" class="hover:text-[#1F3D2B] transition">Spine & Recovery</a>
+          <a href="#catalog" onclick="selectCategoryTab('supplements')" class="hover:text-[#1F3D2B] transition">Supplements</a>
+          <a href="#catalog" onclick="selectCategoryTab('mindfulness')" class="hover:text-[#1F3D2B] transition">Meditation Props</a>
+          <a href="#philosophy" class="hover:text-[#1F3D2B] transition">The Science</a>
+          <a href="#testimonials" class="hover:text-[#1F3D2B] transition">Reviews</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          
+          <!-- Wellness Quiz CTA Button -->
+          <button 
+            id="open-quiz-btn"
+            class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-terracotta-light text-[#C27D54] hover:bg-[#C27D54] hover:text-white transition text-xs font-semibold border border-terracotta/20 shadow-sm"
+          >
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Mat & Health Quiz</span>
+          </button>
+
+          <!-- Wishlist Button -->
+          <button 
+            data-action="open-wishlist"
+            class="relative p-2.5 rounded-full hover:bg-stone-100 text-stone-700 transition"
+            aria-label="Wishlist"
+          >
+            <i data-lucide="heart" class="w-5 h-5"></i>
+            <span id="wishlist-count-badge" class="hidden absolute top-1 right-1 w-4 h-4 bg-terracotta text-white rounded-full text-[10px] font-bold flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Cart Button -->
+          <button 
+            data-action="open-cart"
+            class="relative flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#1F3D2B] text-white hover:bg-[#2D5A43] transition shadow-md"
+            aria-label="Shopping Cart"
+          >
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span class="text-xs font-semibold hidden md:inline">Bag</span>
+            <span id="cart-count-badge" class="w-5 h-5 bg-amber-400 text-stone-900 rounded-full text-[11px] font-extrabold flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Mobile Menu Hamburger Button -->
+          <button 
+            id="mobile-menu-toggle" 
+            onclick="toggleMobileMenu()"
+            class="lg:hidden p-2 rounded-lg text-stone-700 hover:bg-stone-100"
+            aria-label="Toggle Navigation"
+          >
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden lg:hidden border-t border-stone-200 bg-white/95 px-4 pt-3 pb-5 space-y-2 text-sm font-medium text-stone-800">
+      <a href="#catalog" onclick="toggleMobileMenu(); resetFilters();" class="block py-2 hover:text-[#1F3D2B]">Shop All Collection</a>
+      <a href="#catalog" onclick="toggleMobileMenu(); selectCategoryTab('yoga-mats');" class="block py-2 hover:text-[#1F3D2B]">Eco Yoga Mats</a>
+      <a href="#catalog" onclick="toggleMobileMenu(); selectCategoryTab('healthcare');" class="block py-2 hover:text-[#1F3D2B]">Spine & Orthopedic Recovery</a>
+      <a href="#catalog" onclick="toggleMobileMenu(); selectCategoryTab('supplements');" class="block py-2 hover:text-[#1F3D2B]">Holistic Herbal Supplements</a>
+      <a href="#catalog" onclick="toggleMobileMenu(); selectCategoryTab('mindfulness');" class="block py-2 hover:text-[#1F3D2B]">Meditation Props</a>
+      <a href="#philosophy" onclick="toggleMobileMenu();" class="block py-2 hover:text-[#1F3D2B]">Why PranaVital?</a>
+      <button onclick="toggleMobileMenu(); startQuiz();" class="w-full mt-3 py-2.5 px-4 bg-terracotta text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4"></i> Take Mat & Health Quiz
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION -->
+  <section class="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24">
+    <!-- Background subtle ambient shapes -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-100/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute bottom-0 right-10 w-[400px] h-[400px] bg-terracotta-light/60 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-stone-200/80 shadow-sm text-xs text-stone-700">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span class="font-semibold text-[#1F3D2B]">100% Certified Biodegradable Tree Rubber</span>
+            <span class="text-stone-300">|</span>
+            <span class="text-stone-500">Zero PVC & Toxic Glues</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 leading-[1.1] tracking-tight">
+            Elevate Your Practice. <br>
+            <span class="italic font-normal text-[#C27D54]">Restore Your Vitality.</span>
+          </h1>
+
+          <p class="text-stone-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
+            Physiotherapist-designed yoga mats with laser alignment, clinical acupressure spine recovery sets, and clean adaptogenic herbs — crafted for mindful movement, joint longevity, and whole-body healing.
+          </p>
+
+          <!-- Hero Actions -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a 
+              href="#catalog"
+              class="w-full sm:w-auto px-8 py-4 bg-[#1F3D2B] hover:bg-[#2D5A43] text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 text-sm"
+            >
+              <span>Explore Collection</span>
+              <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+            </a>
+
+            <button 
+              onclick="startQuiz()"
+              class="w-full sm:w-auto px-7 py-4 bg-white hover:bg-stone-50 text-stone-800 font-semibold rounded-2xl border border-stone-200 shadow-sm hover:border-stone-300 transition flex items-center justify-center gap-2 text-sm"
+            >
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#C27D54]"></i>
+              <span>Find My Ideal Mat & Regimen</span>
+            </button>
+          </div>
+
+          <!-- Customer Proof & Ratings -->
+          <div class="pt-6 border-t border-stone-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-stone-600">
+            <div class="flex items-center gap-1">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="font-bold text-stone-900 ml-1">4.92 / 5.0</span>
+            </div>
+            <span>•</span>
+            <span>Over <strong>18,500+</strong> Yogis & Physical Therapists</span>
+            <span class="hidden sm:inline">•</span>
+            <span class="text-emerald-700 font-medium flex items-center gap-1">
+              <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Climate Neutral Certified
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Collage -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Hero Image Card -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-stone-100 relative group">
+              <img 
+                src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1000&q=80" 
+                alt="Woman practicing mindful yoga on natural eco yoga mat" 
+                class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              
+              <!-- Bottom caption overlay -->
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <span class="text-[11px] uppercase tracking-widest font-bold text-amber-300">Featured Innovation</span>
+                <h4 class="font-serif text-xl font-bold mt-1">AuraGrip™ Wet & Dry Traction</h4>
+                <p class="text-xs text-stone-200 mt-1 line-clamp-2">Tree-rubber grip that increases stickiness as body temperature rises.</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1: Doctor Approved Spine Therapy -->
+            <div class="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-stone-200/90 flex items-center gap-3 animate-float max-w-xs">
+              <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
+                <i data-lucide="activity" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h5 class="text-xs font-bold text-stone-900 leading-tight">Orthopedic Care</h5>
+                <p class="text-[11px] text-stone-500">Decompresses spine & eases lumbar tension in 15 min daily.</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Certified Eco Seal -->
+            <div class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-lg border border-stone-200/90 flex items-center gap-2">
+              <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center">
+                <i data-lucide="leaf" class="w-4 h-4"></i>
+              </span>
+              <div class="text-left">
+                <span class="block text-[11px] font-bold text-stone-900">0% Harmful PVC</span>
+                <span class="block text-[9px] text-stone-400">100% Recyclable</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TRUST BADGES / VALUE PROPOSITION STRIP -->
+  <section class="bg-white border-y border-stone-200/80 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-800 flex items-center justify-center mb-3">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-sm font-bold text-stone-900">100% Non-Toxic Guarantee</h4>
+          <p class="text-xs text-stone-500 mt-1 max-w-[190px]">Sustainably harvested tree rubber, cork, and organic linen.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-amber-50 text-amber-800 flex items-center justify-center mb-3">
+            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-sm font-bold text-stone-900">Physiotherapist Endorsed</h4>
+          <p class="text-xs text-stone-500 mt-1 max-w-[190px]">Joint-cushioning densities calibrated for knee & spine protection.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-stone-100 text-stone-800 flex items-center justify-center mb-3">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-sm font-bold text-stone-900">Carbon-Neutral Shipping</h4>
+          <p class="text-xs text-stone-500 mt-1 max-w-[190px]">Free delivery on orders over $75 with zero plastic packaging.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-rose-50 text-rose-800 flex items-center justify-center mb-3">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-sm font-bold text-stone-900">30-Day Peaceful Mind Trial</h4>
+          <p class="text-xs text-stone-500 mt-1 max-w-[190px]">Test it on your home studio floor. Love it or return with ease.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SHOP BY CATEGORY SPOTLIGHT -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="text-xs uppercase font-bold tracking-widest text-[#C27D54]">Curated Wellness Worlds</span>
+      <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Holistic Gear for Body & Mind</h2>
+      <p class="text-xs sm:text-sm text-stone-500 mt-2">Explore our scientifically supported categories designed to optimize flexibility, pain relief, and inner tranquility.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Category 1 -->
+      <div onclick="selectCategoryTab('yoga-mats')" class="cursor-pointer group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-100 card-hover-fx border border-stone-200">
+        <img src="https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=600&q=80" alt="Yoga Mats" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-300">Grip & Alignment</span>
+          <h3 class="font-serif text-xl font-bold mt-0.5">Eco Yoga Mats</h3>
+          <p class="text-xs text-stone-200 mt-1">Natural tree rubber & cork mats</p>
+          <div class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-amber-300 group-hover:translate-x-1 transition">
+            Shop Mats <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div onclick="selectCategoryTab('healthcare')" class="cursor-pointer group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-100 card-hover-fx border border-stone-200">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Orthopedic & Acupressure" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-300">Spine & Joint Care</span>
+          <h3 class="font-serif text-xl font-bold mt-0.5">Healthcare & Recovery</h3>
+          <p class="text-xs text-stone-200 mt-1">Acupressure mats, rollers & stretchers</p>
+          <div class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-amber-300 group-hover:translate-x-1 transition">
+            Shop Recovery <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div onclick="selectCategoryTab('supplements')" class="cursor-pointer group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-100 card-hover-fx border border-stone-200">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Herbal Supplements" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-300">Adaptogens & Tonics</span>
+          <h3 class="font-serif text-xl font-bold mt-0.5">Herbal Supplements</h3>
+          <p class="text-xs text-stone-200 mt-1">Ashwagandha, Turmeric & Sleep Blends</p>
+          <div class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-amber-300 group-hover:translate-x-1 transition">
+            Shop Supplements <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4 -->
+      <div onclick="selectCategoryTab('mindfulness')" class="cursor-pointer group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-100 card-hover-fx border border-stone-200">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Meditation & Props" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-300">Sacred Space</span>
+          <h3 class="font-serif text-xl font-bold mt-0.5">Mindfulness & Props</h3>
+          <p class="text-xs text-stone-200 mt-1">Zafu cushions, sprays & singing bowls</p>
+          <div class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-amber-300 group-hover:translate-x-1 transition">
+            Shop Props <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. MAIN PRODUCT CATALOG SECTION -->
+  <section id="catalog" class="py-16 bg-[#F8F6F0] border-t border-stone-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Catalog Header & Search/Filter Controls -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+        <div>
+          <span class="text-xs font-bold tracking-widest uppercase text-[#C27D54]">Holistic Apothecary & Gear</span>
+          <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Mindful Movement & Healthcare Essentials</h2>
+          <p id="product-count" class="text-xs text-stone-500 mt-1">Showing 12 wellness essentials</p>
+        </div>
+
+        <!-- Search Bar and Sorting -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <!-- Search Input -->
+          <div class="relative min-w-[240px]">
+            <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="Search mats, acupressure, sleep..." 
+              class="w-full pl-10 pr-4 py-2 bg-white border border-stone-300 rounded-xl text-xs text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-[#1F3D2B] focus:border-transparent transition shadow-sm"
+            />
+          </div>
+
+          <!-- Sort Dropdown -->
+          <div class="relative">
+            <select 
+              id="sort-select" 
+              class="w-full sm:w-auto appearance-none bg-white border border-stone-300 rounded-xl px-4 py-2 pr-9 text-xs font-medium text-stone-700 focus:outline-none focus:ring-2 focus:ring-[#1F3D2B] shadow-sm cursor-pointer"
+            >
+              <option value="featured">Featured Essentials</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Customer Rating</option>
+            </select>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-stone-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Category Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
+        <button class="filter-tab active px-5 py-2.5 rounded-full border border-stone-300 text-xs font-semibold tracking-wide whitespace-nowrap transition cursor-pointer" data-category="all">
+          All Essentials
+        </button>
+        <button class="filter-tab px-5 py-2.5 rounded-full border border-stone-300 bg-white text-stone-700 hover:border-stone-400 text-xs font-semibold tracking-wide whitespace-nowrap transition cursor-pointer" data-category="yoga-mats">
+          🧘 Yoga Mats
+        </button>
+        <button class="filter-tab px-5 py-2.5 rounded-full border border-stone-300 bg-white text-stone-700 hover:border-stone-400 text-xs font-semibold tracking-wide whitespace-nowrap transition cursor-pointer" data-category="healthcare">
+          🩺 Spine & Recovery
+        </button>
+        <button class="filter-tab px-5 py-2.5 rounded-full border border-stone-300 bg-white text-stone-700 hover:border-stone-400 text-xs font-semibold tracking-wide whitespace-nowrap transition cursor-pointer" data-category="supplements">
+          🌿 Herbal Supplements
+        </button>
+        <button class="filter-tab px-5 py-2.5 rounded-full border border-stone-300 bg-white text-stone-700 hover:border-stone-400 text-xs font-semibold tracking-wide whitespace-nowrap transition cursor-pointer" data-category="mindfulness">
+          🕯️ Mindfulness & Props
+        </button>
+      </div>
+
+      <!-- Product Cards Grid Container -->
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. SCIENCE & PHILOSOPHY: WHY PRANAVITAL? -->
+  <section id="philosophy" class="py-20 bg-white border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Image Comparison -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="relative rounded-3xl overflow-hidden shadow-xl border border-stone-200 aspect-[16/10] bg-stone-100">
+            <img 
+              src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=80" 
+              alt="Proper spinal alignment in yoga posture" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white text-xs">
+              <div class="font-bold text-stone-900 mb-1 flex items-center gap-1.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Calibrated Joint Impact Dampening
+              </div>
+              <p class="text-stone-500">Traditional foam mats sink under heavy pressure, compressing patellar nerves. PranaVital high-density tree rubber rebounds with zero bottoming-out.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-stone-50 border border-stone-200 p-4 rounded-2xl text-center">
+              <span class="block text-2xl font-serif font-bold text-stone-900">0% PVC</span>
+              <span class="text-xs text-stone-500">Non-toxic, safe for skin & lung contact</span>
+            </div>
+            <div class="bg-stone-50 border border-stone-200 p-4 rounded-2xl text-center">
+              <span class="block text-2xl font-serif font-bold text-stone-900">8,000+</span>
+              <span class="text-xs text-stone-500">Acupressure nodes for myofascial release</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Copy -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#C27D54]">Holistic Biomechanics</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
+            Designed where ancient yogic wisdom meets modern physical therapy.
+          </h2>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Most generic exercise mats on the market are manufactured from cheap Polyvinyl Chloride (PVC) plastic and phthalates that off-gas dangerous chemical VOCs while you perform deep pranayama breathwork.
+          </p>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            PranaVital was founded alongside physiotherapists and certified yoga masters to engineer clean, toxin-free tools. From organic cork harvested without felling trees, to pure Ayurvedic herbs third-party tested for heavy metals, every element protects your sacred sanctuary.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h5 class="text-xs font-bold text-stone-900">Laser-Guided Precision Alignment</h5>
+                <p class="text-xs text-stone-500">Guarantees correct stance width and wrist angles, eliminating repetitive strain injuries.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h5 class="text-xs font-bold text-stone-900">Natural Antimicrobial Self-Cleansing</h5>
+                <p class="text-xs text-stone-500">Suberin in our oak cork mats and botanical distillates eliminate mold and sweat odor naturally.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h5 class="text-xs font-bold text-stone-900">Full Spectrum Recovery Protocol</h5>
+                <p class="text-xs text-stone-500">Pair your mat flows with targeted spine decompression and adaptogens to prevent burnout.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. INTERACTIVE WELLNESS QUIZ PROMO BANNER -->
+  <section class="py-14 bg-gradient-to-r from-[#1F3D2B] via-[#2A523B] to-[#1F3D2B] text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-semibold backdrop-blur">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        <span>60-Second Mat & Health Consultation</span>
+      </div>
+      <h3 class="text-3xl sm:text-4xl font-serif font-bold">Unsure which mat or healthcare gear is right for you?</h3>
+      <p class="text-xs sm:text-sm text-stone-200 max-w-xl mx-auto font-light">
+        Answer 3 quick questions about your physical discomfort, joint sensitivities, and practice style to receive a doctor-curated regimen with 20% bundle savings.
+      </p>
+      <div class="pt-2">
+        <button 
+          onclick="startQuiz()"
+          class="px-8 py-3.5 bg-[#C27D54] hover:bg-[#A9653D] text-white font-bold text-xs uppercase tracking-wider rounded-2xl shadow-xl transition active:scale-95 inline-flex items-center gap-2"
+        >
+          <i data-lucide="help-circle" class="w-4 h-4"></i>
+          <span>Take the 60-Second Quiz</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. REVIEWS & TESTIMONIALS -->
+  <section id="testimonials" class="py-20 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase font-bold tracking-widest text-[#C27D54]">Voice of the Community</span>
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Loved by Yogis, Healers & Therapists</h2>
+        <p class="text-xs sm:text-sm text-stone-500 mt-2">See how our mindful products transform daily movement, spinal comfort, and restorative sleep.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <h4 class="font-serif font-bold text-stone-900 text-base mb-2">"Total game-changer for sweaty hot yoga flows"</h4>
+            <p class="text-stone-600 text-xs leading-relaxed">
+              "The AuraGrip Pro mat is by far the best investment I’ve made in 8 years of teaching. My hands usually slip in downward dog the minute I break a sweat, but this mat grips even tighter. Plus, zero toxic plastic smell!"
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center gap-3 mt-4">
+            <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs">
+              EK
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-stone-900">Elena Rostova</h5>
+              <p class="text-[11px] text-stone-400">Certified Ashtanga Teacher • Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <h4 class="font-serif font-bold text-stone-900 text-base mb-2">"Relieved my desk-bound sciatica in 2 weeks"</h4>
+            <p class="text-stone-600 text-xs leading-relaxed">
+              "As a software engineer sitting 10+ hours a day, my lower back was constantly stiff. The AcuRelief Spikemat paired with the BioSpine stretcher released knots that physical therapy took months to touch. Essential daily self-care."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center gap-3 mt-4">
+            <div class="w-9 h-9 rounded-full bg-terracotta-light text-terracotta font-bold flex items-center justify-center text-xs">
+              MC
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-stone-900">Marcus Chen</h5>
+              <p class="text-[11px] text-stone-400">Long-term Back Pain Patient • Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <h4 class="font-serif font-bold text-stone-900 text-base mb-2">"Deep sleep without grogginess"</h4>
+            <p class="text-stone-600 text-xs leading-relaxed">
+              "I recommend DeepRest Magnesium Glycinate to all my clinic patients struggling with post-training muscle spasms and fragmented sleep. Gentle on the stomach and promotes genuine deep REM cycles."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center gap-3 mt-4">
+            <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-xs">
+              Dr.S
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-stone-900">Dr. Sarah Jenkins, PT, DPT</h5>
+              <p class="text-[11px] text-stone-400">Physical Therapy Specialist • Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. NEWSLETTER & VIP WELLNESS CIRCLE -->
+  <section class="py-16 bg-[#1F3D2B] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs uppercase font-bold tracking-widest text-[#C27D54]">Join the Prana Circle</span>
+      <h3 class="text-3xl font-serif font-bold">Receive 15% Off Your First Mindful Order</h3>
+      <p class="text-xs sm:text-sm text-stone-300 max-w-lg mx-auto">
+        Subscribe to receive weekly physiotherapist routines, Ayurvedic recovery guides, and early access to limited edition artisan yoga mats.
+      </p>
+
+      <form id="newsletter-form" class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto pt-2">
+        <input 
+          type="email" 
+          id="newsletter-email" 
+          required 
+          placeholder="Enter your email address" 
+          class="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-stone-400 border border-white/20 focus:outline-none focus:ring-2 focus:ring-amber-300 text-xs"
+        />
+        <button 
+          type="submit" 
+          class="w-full sm:w-auto px-6 py-3 bg-[#C27D54] hover:bg-[#A9653D] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow whitespace-nowrap"
+        >
+          Subscribe
+        </button>
+      </form>
+      <p class="text-[11px] text-stone-400">Zero spam. Unsubscribe with one click anytime.</p>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer class="bg-[#142118] text-stone-400 text-xs py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-stone-800">
+        
+        <!-- Brand Summary -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-emerald-700 flex items-center justify-center text-white">
+              <svg class="w-5 h-5 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M12 2C12 2 15 7 15 11C15 13 13.5 15 12 15C10.5 15 9 13 9 11C9 7 12 2 12 2Z"></path>
+                <path d="M12 15C8 15 4 12 4 8C7 8 10 10 12 15Z"></path>
+                <path d="M12 15C16 15 20 12 20 8C17 8 14 10 12 15Z"></path>
+              </svg>
+            </div>
+            <span class="font-serif text-xl font-bold text-white tracking-wide">PranaVital</span>
+          </div>
+          <p class="text-stone-400 text-xs leading-relaxed max-w-sm">
+            Ethically engineering biodegradable yoga mats and clinical-grade recovery equipment to foster lifelong holistic wellness, injury prevention, and mental balance.
+          </p>
+          <div class="flex items-center gap-3 text-stone-300">
+            <span class="p-2 bg-stone-900 rounded-lg hover:text-white cursor-pointer"><i data-lucide="instagram" class="w-4 h-4"></i></span>
+            <span class="p-2 bg-stone-900 rounded-lg hover:text-white cursor-pointer"><i data-lucide="facebook" class="w-4 h-4"></i></span>
+            <span class="p-2 bg-stone-900 rounded-lg hover:text-white cursor-pointer"><i data-lucide="youtube" class="w-4 h-4"></i></span>
+          </div>
+        </div>
+
+        <!-- Col 2: Shop -->
+        <div>
+          <h5 class="text-stone-200 font-bold uppercase tracking-wider text-[11px] mb-3">Shop Essentials</h5>
+          <ul class="space-y-2">
+            <li><a href="#catalog" onclick="selectCategoryTab('yoga-mats')" class="hover:text-white transition">Natural Rubber Mats</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('yoga-mats')" class="hover:text-white transition">Organic Cork Mats</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('healthcare')" class="hover:text-white transition">Acupressure Spike Sets</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('healthcare')" class="hover:text-white transition">Spine Decompression</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('supplements')" class="hover:text-white transition">Ayurvedic Ashwagandha</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('mindfulness')" class="hover:text-white transition">Zafu Buckwheat Bolsters</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical & Science -->
+        <div>
+          <h5 class="text-stone-200 font-bold uppercase tracking-wider text-[11px] mb-3">Holistic Health</h5>
+          <ul class="space-y-2">
+            <li><a href="#philosophy" class="hover:text-white transition">Physiotherapist Standards</a></li>
+            <li><a href="javascript:void(0)" onclick="startQuiz()" class="hover:text-white transition">Mat & Health Quiz</a></li>
+            <li><a href="#philosophy" class="hover:text-white transition">Eco-Toxicity Certifications</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-white transition">Sustainably Harvested Cork</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-white transition">Lab Heavy-Metal Reports</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support & Guarantees -->
+        <div>
+          <h5 class="text-stone-200 font-bold uppercase tracking-wider text-[11px] mb-3">Assurance & Help</h5>
+          <ul class="space-y-2">
+            <li><a href="javascript:void(0)" class="hover:text-white transition">Track Your Order</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-white transition">30-Day Peaceful Mind Trial</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-white transition">Carbon-Neutral Shipping</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-white transition">Mat Care & Cleaning Guide</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-white transition">Contact Wellness Support</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500">
+        <p>© 2026 PranaVital LLC. All rights reserved. Mindful living guaranteed.</p>
+        <div class="flex items-center gap-4">
+          <span>Privacy Policy</span>
+          <span>•</span>
+          <span>Terms of Service</span>
+          <span>•</span>
+          <span>FDA Healthcare Disclaimer</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & SLIDE-OUT DRAWERS
+       ========================================================================= -->
+
+  <!-- A. CART DRAWER -->
+  <div id="cart-backdrop" class="fixed inset-0 bg-black/50 z-50 drawer-backdrop"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-[#FAF9F5] z-50 drawer-content shadow-2xl flex flex-col justify-between">
+    
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-stone-200 bg-white flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-[#1F3D2B]"></i>
+        <h3 class="font-serif text-lg font-bold text-stone-900">Your Wellness Bag</h3>
+      </div>
+      <button data-action="close-cart" class="p-1.5 rounded-lg text-stone-400 hover:text-stone-700 hover:bg-stone-100 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Bar -->
+    <div class="px-5 py-3 bg-stone-100 border-b border-stone-200">
+      <p id="free-shipping-text" class="text-xs text-stone-700 mb-1.5 text-center font-medium">
+        Add <strong>$75.00</strong> more for Free Shipping
+      </p>
+      <div class="w-full bg-stone-200 h-2 rounded-full overflow-hidden">
+        <div id="free-shipping-progress" class="bg-amber-500 h-full transition-all duration-300" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll Area -->
+    <div id="cart-items-container" class="flex-1 overflow-y-auto p-5">
+      <!-- Populated dynamically by app.js -->
+    </div>
+
+    <!-- Drawer Footer (Coupon & Checkout) -->
+    <div class="p-5 border-t border-stone-200 bg-white space-y-3">
+      
+      <!-- Promo Code Input -->
+      <div>
+        <div class="flex gap-2">
+          <input 
+            type="text" 
+            id="coupon-input" 
+            placeholder="Try 'ZEN25' (25% off)" 
+            class="flex-1 px-3 py-2 text-xs border border-stone-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#1F3D2B] uppercase font-mono"
+          />
+          <button 
+            id="coupon-btn"
+            class="px-4 py-2 bg-stone-800 hover:bg-stone-900 text-white rounded-xl text-xs font-semibold transition"
+          >
+            Apply
+          </button>
+        </div>
+        <p id="coupon-message" class="text-xs mt-1"></p>
+      </div>
+
+      <!-- Totals Breakdown -->
+      <div class="space-y-1.5 text-xs text-stone-600 pt-2 border-t border-stone-100">
+        <div class="flex justify-between"><span>Subtotal</span> <span id="cart-subtotal" class="font-medium text-stone-900">$0.00</span></div>
+        <div class="flex justify-between text-emerald-700 font-medium"><span>Promo Savings</span> <span id="cart-discount">$0.00</span></div>
+        <div class="flex justify-between"><span>Shipping</span> <span id="cart-shipping" class="font-medium text-stone-900">$8.99</span></div>
+        <div class="flex justify-between text-sm font-bold text-stone-900 pt-2 border-t font-serif">
+          <span>Estimated Total</span> <span id="cart-total" class="text-base text-[#1F3D2B]">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Checkout Button -->
+      <button 
+        id="checkout-btn"
+        class="w-full py-3.5 bg-[#1F3D2B] hover:bg-[#2D5A43] disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-lg transition flex items-center justify-center gap-2"
+      >
+        <i data-lucide="lock" class="w-4 h-4"></i>
+        <span>Proceed to Secure Checkout</span>
+      </button>
+
+      <p class="text-[11px] text-center text-stone-400 flex items-center justify-center gap-1">
+        <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-600"></i> Encrypted 256-Bit SSL Checkout
+      </p>
+    </div>
+  </aside>
+
+  <!-- B. WISHLIST DRAWER -->
+  <div id="wishlist-backdrop" class="fixed inset-0 bg-black/50 z-50 drawer-backdrop"></div>
+  <aside id="wishlist-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-[#FAF9F5] z-50 drawer-content shadow-2xl flex flex-col justify-between">
+    <div class="p-5 border-b border-stone-200 bg-white flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="heart" class="w-5 h-5 text-red-500 fill-red-500"></i>
+        <h3 class="font-serif text-lg font-bold text-stone-900">Saved Wishlist</h3>
+      </div>
+      <button data-action="close-wishlist" class="p-1.5 rounded-lg text-stone-400 hover:text-stone-700 hover:bg-stone-100 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <div id="wishlist-container" class="flex-1 overflow-y-auto p-5">
+      <!-- Populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- C. PRODUCT QUICK VIEW MODAL -->
+  <div id="quick-view-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 modal-container drawer-backdrop">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl modal-box relative">
+      <button 
+        data-action="close-quickview"
+        class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white/90 shadow text-stone-600 hover:text-black flex items-center justify-center transition"
+      >
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div id="quick-view-content">
+        <!-- Injected dynamically by openQuickView() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- D. INTERACTIVE MAT & HEALTHCARE QUIZ MODAL -->
+  <div id="quiz-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 modal-container drawer-backdrop">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl modal-box relative">
+      <button 
+        id="close-quiz-btn"
+        class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 transition p-1"
+      >
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="quiz-step-container">
+        <!-- Injected dynamically by app.js -->
+      </div>
+
+      <div id="quiz-result-container" class="hidden">
+        <!-- Injected dynamically when finished -->
+      </div>
+    </div>
+  </div>
+
+  <!-- E. MULTI-STEP CHECKOUT MODAL -->
+  <div id="checkout-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 modal-container drawer-backdrop">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl modal-box relative p-6 sm:p-8">
+      
+      <button 
+        data-action="close-checkout"
+        class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 transition p-1"
+      >
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Checkout Form -->
+      <form id="checkout-form" class="space-y-6">
+        <div class="flex items-center gap-2 border-b border-stone-200 pb-3">
+          <i data-lucide="shield-check" class="w-6 h-6 text-emerald-700"></i>
+          <div>
+            <h3 class="font-serif text-xl font-bold text-stone-900">Secure Order Checkout</h3>
+            <p class="text-[11px] text-stone-500">256-Bit SSL Encrypted • 30-Day Guaranteed Returns</p>
+          </div>
+        </div>
+
+        <!-- 1. Customer & Shipping Info -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-stone-700 mb-3">1. Shipping Information</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div>
+              <label class="block text-stone-600 mb-1">First & Last Name</label>
+              <input type="text" required placeholder="Aria Vance" class="w-full px-3 py-2 border rounded-xl focus:ring-1 focus:ring-[#1F3D2B]" />
+            </div>
+            <div>
+              <label class="block text-stone-600 mb-1">Email for Tracking Receipt</label>
+              <input type="email" id="checkout-email" required placeholder="aria.vance@example.com" class="w-full px-3 py-2 border rounded-xl focus:ring-1 focus:ring-[#1F3D2B]" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-stone-600 mb-1">Street Address</label>
+              <input type="text" required placeholder="742 Evergreen Wellness Way, Apt 4B" class="w-full px-3 py-2 border rounded-xl focus:ring-1 focus:ring-[#1F3D2B]" />
+            </div>
+            <div>
+              <label class="block text-stone-600 mb-1">City</label>
+              <input type="text" required placeholder="San Francisco" class="w-full px-3 py-2 border rounded-xl focus:ring-1 focus:ring-[#1F3D2B]" />
+            </div>
+            <div>
+              <label class="block text-stone-600 mb-1">Postal / Zip Code</label>
+              <input type="text" required placeholder="94107" class="w-full px-3 py-2 border rounded-xl focus:ring-1 focus:ring-[#1F3D2B]" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Payment Method -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-stone-700 mb-3">2. Payment Method</h4>
+          <div class="space-y-2">
+            <label class="flex items-center gap-3 p-3 border rounded-xl cursor-pointer hover:bg-stone-50 transition border-[#1F3D2B] bg-[#E9F1EC]">
+              <input type="radio" name="payment-method" value="card" checked class="text-[#1F3D2B]" />
+              <i data-lucide="credit-card" class="w-4 h-4 text-emerald-800"></i>
+              <span class="text-xs font-semibold text-stone-800">Credit or Debit Card</span>
+              <span class="text-[10px] text-stone-500 ml-auto">Visa, MC, Amex</span>
+            </label>
+
+            <div class="grid grid-cols-2 gap-2 text-xs pt-2">
+              <div class="col-span-2">
+                <input type="text" placeholder="Card Number: 4242 •••• •••• 4242" value="4242 8890 1234 5678" class="w-full px-3 py-2 border rounded-xl font-mono text-stone-700" />
+              </div>
+              <div>
+                <input type="text" placeholder="MM/YY" value="09/28" class="w-full px-3 py-2 border rounded-xl text-center font-mono" />
+              </div>
+              <div>
+                <input type="text" placeholder="CVC" value="882" class="w-full px-3 py-2 border rounded-xl text-center font-mono" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary Preview -->
+        <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200">
+          <h5 class="text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Order Review</h5>
+          <div id="checkout-summary-list" class="max-h-36 overflow-y-auto mb-2 space-y-1">
+            <!-- Dynamically populated -->
+          </div>
+          <div id="checkout-modal-total">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          id="place-order-btn"
+          class="w-full py-3.5 bg-[#1F3D2B] hover:bg-[#2D5A43] text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-lg transition flex items-center justify-center gap-2"
+        >
+          <i data-lucide="check" class="w-4 h-4"></i>
+          <span>Complete Secure Order</span>
+        </button>
+      </form>
+
+      <!-- Order Success State -->
+      <div id="order-success-screen" class="hidden">
+        <!-- Rendered by app.js handleCheckoutSubmit -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- F. TOAST NOTIFICATION ROOT -->
+  <div id="toast-container"></div>
+
+  <!-- Inline Helper Scripts -->
+  <script>
+    function selectCategoryTab(category) {
+      const tab = document.querySelector(`.filter-tab[data-category="${category}"]`);
+      if (tab) {
+        tab.click();
+      }
+      const catalogEl = document.getElementById('catalog');
+      if (catalogEl) {
+        catalogEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-nav');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    }
+  </script>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
+

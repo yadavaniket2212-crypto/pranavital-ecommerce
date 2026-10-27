@@ -1,0 +1,34 @@
+name: Code Quality & Link Validation
+
+on:
+  push:
+    branches: ["main", "dev"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  validate:
+    name: Lint & Resource Integrity Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: HTML Syntax Validation
+        run: |
+          npx htmlhint "**/*.html" --rules tag-pair,attr-lowercase,id-unique,src-not-empty
+
+      - name: Verify Key Project Assets Exist
+        run: |
+          test -f index.html || exit 1
+          test -f styles.css || exit 1
+          test -f app.js || exit 1
+          test -f README.md || exit 1
+          echo "All core assets and directories verified successfully."
+

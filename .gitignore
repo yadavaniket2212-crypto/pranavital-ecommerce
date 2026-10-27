@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Testing & Coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Build & Output
+dist/
+build/
+.cache/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE & Workspace
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.gemini/
+
