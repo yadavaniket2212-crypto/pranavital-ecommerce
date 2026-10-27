@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/pranavital-ecommerce.git"
+    "url": "git+https://github.com/yadavaniket2212-crypto/pranavital-ecommerce.git"
   },
   "keywords": [
     "ecommerce",
@@ -26,11 +26,11 @@
     "frontend",
     "responsive-design"
   ],
-  "author": "PranaVital Team",
+  "author": "yadavaniket2212-crypto",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/your-username/pranavital-ecommerce/issues"
+    "url": "https://github.com/yadavaniket2212-crypto/pranavital-ecommerce/issues"
   },
-  "homepage": "https://your-username.github.io/pranavital-ecommerce"
+  "homepage": "https://yadavaniket2212-crypto.github.io/pranavital-ecommerce/"
 }
 

@@ -8,7 +8,7 @@ Thank you for your interest in contributing to PranaVital! We are committed to f
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/pranavital-ecommerce.git
+   git clone https://github.com/yadavaniket2212-crypto/pranavital-ecommerce.git
    cd pranavital-ecommerce
    ```
 

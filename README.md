@@ -6,10 +6,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Status: Production Ready](https://img.shields.io/badge/Status-Production%20Ready-success.svg)](#)
-[![Deployment: GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue.svg)](.github/workflows/deploy-pages.yml)
-[![Zero Build Bloat](https://img.shields.io/badge/Dependencies-Zero%20Build%20Bloat-orange.svg)](#)
+[![Deployment: Live Website](https://img.shields.io/badge/Website-Live%20Online-blue.svg)](https://yadavaniket2212-crypto.github.io/pranavital-ecommerce/)
 
-[Live Localhost Demo](http://localhost:8080/) • [Architecture](docs/ARCHITECTURE.md) • [User Flows](docs/USER_FLOWS.md) • [Component Guide](docs/COMPONENT_GUIDE.md) • [Report Bug](.github/ISSUE_TEMPLATE/bug_report.md)
+### 🌐 [Click Here to View Live Website: https://yadavaniket2212-crypto.github.io/pranavital-ecommerce/](https://yadavaniket2212-crypto.github.io/pranavital-ecommerce/)
+
+[Architecture](docs/ARCHITECTURE.md) • [User Flows](docs/USER_FLOWS.md) • [Component Guide](docs/COMPONENT_GUIDE.md) • [Report Bug](.github/ISSUE_TEMPLATE/bug_report.md)
 
 </div>
 
@@ -183,7 +184,7 @@ Go to [github.com/new](https://github.com/new) and create a repository named `pr
 ### 3. Connect your local repository and push:
 ```bash
 git branch -M main
-git remote add origin https://github.com/<YOUR-USERNAME>/pranavital-ecommerce.git
+git remote add origin https://github.com/yadavaniket2212-crypto/pranavital-ecommerce.git
 git push -u origin main
 ```
 
@@ -196,7 +197,7 @@ This repository includes pre-configured GitHub Actions:
 1. **Deploy to GitHub Pages (`.github/workflows/deploy-pages.yml`)**:
    - In your GitHub repo, go to **Settings > Pages**.
    - Under **Build and deployment > Source**, select **GitHub Actions**.
-   - Every push to `main` will automatically build and publish your live website to `https://<YOUR-USERNAME>.github.io/pranavital-ecommerce/`.
+   - Every push to `main` will automatically build and publish your live website to `https://yadavaniket2212-crypto.github.io/pranavital-ecommerce/`.
 
 2. **Code Quality & Link Validation (`.github/workflows/code-quality.yml`)**:
    - Validates HTML semantics, verifies asset integrity, and ensures zero broken links on every Pull Request.
